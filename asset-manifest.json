@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/lenny-ntech/character/static/css/main.82da3029.css",
+    "main.js": "/lenny-ntech/character/static/js/main.04c65d05.js",
+    "index.html": "/lenny-ntech/character/index.html",
+    "main.82da3029.css.map": "/lenny-ntech/character/static/css/main.82da3029.css.map",
+    "main.04c65d05.js.map": "/lenny-ntech/character/static/js/main.04c65d05.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.82da3029.css",
+    "static/js/main.04c65d05.js"
+  ]
+}

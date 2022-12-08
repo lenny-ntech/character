@@ -1,0 +1,475 @@
+body {
+	margin: 0px;
+}
+
+.nav {
+	background: #ccc;
+}
+
+.nav a {
+	display: inline-block;
+	padding: 3px 5px;
+}
+
+a {
+  text-decoration: none;
+  padding: 0 10px;
+  color: #333;
+  font-weight: bold;
+}
+
+.container {
+	position: relative;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+}
+
+.editButtons {
+	position: absolute;
+	top: -22px;
+	right: 5px;
+}
+
+.show_true {
+/*	display: block; */
+	visibility: visible;
+}
+
+.show_false {
+/*	display: none; */
+	visibility: hidden;
+}
+
+.charStats .fieldDisplay {
+	text-transform:  uppercase;
+}
+
+.charInfo {
+	display: flex;
+	gap: 20px;
+}
+
+.charInfo .fieldGroup {
+	border: 1px solid #666666;
+	border-radius: 10px;
+	position: relative;
+}
+
+.charInfo .fieldDisplay {
+	position: absolute;
+	background: #FFFFFF;
+	padding: 5px;
+	left: 10px;
+	top: -12px;
+	font-size: 12px;
+	z-index: 10;
+}
+
+.charInfo .displayField {
+	padding: 10px 15px;
+}
+
+.charDetails {
+	display: flex;
+	gap: 20px;
+	margin-top: 20px;
+}
+
+.charStats {
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	justify-content: center;
+	align-items: center;
+}
+
+.charStats .fieldGroup {
+	text-align: center;
+	border: 1px solid #666666;
+	border-radius: 10px;
+	position: relative;
+}
+
+.charInfo .fieldGroup.groupcharClass {
+	padding-right: 50px;
+}
+.charInfo .fieldGroup.groupcharLevel {
+	border: none;
+	margin-left: -75px;
+	margin-top: 1px;
+}
+
+.charStats .fieldGroup .fieldDisplay {
+	position: absolute;
+	top: -12px;
+	left: 0px;
+	right: 0px;
+	margin: 0px 4px;
+	font-size: 12px;
+	background:  #FFFFFF;
+	padding: 5px;
+	z-index: 10;
+}
+
+.charStats .displayField {
+	padding: 15px 15px 20px;
+}
+/*
+.charStats .editField {
+	padding: 15px 15px 20px;
+	border: 0px;
+	max-width: 17px;
+	border-radius: 10px;
+}
+*/
+.charStats .statCalc {
+	position: absolute;
+	bottom: -12px;
+	background: #FFFFFF;
+	padding: 2px 5px;
+	left: 0px;
+    right: 0px;
+    border: 1px solid #666;
+    border-radius: 10px;
+    margin: 0px 5px;
+}
+
+.editField {
+	position: absolute;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	border: none;
+	border-radius: 10px;
+	padding: 15px;
+}
+
+.savesSkillsContainer {
+}
+
+.charSaves, .charSkills,
+.diceRolls,
+.actionContainer {
+	border: 1px solid #666;
+	border-radius: 10px;
+	padding: 10px 15px;
+	font-size: 14px;
+}
+
+.radioButton {
+	width: 13px;
+	height: 13px;
+	border: 1px solid #000000;
+	border-radius: 10px;
+}
+
+.radioButton.skillExpertise {
+	opacity: 0.3;
+}
+
+.radioButton.checked_true {
+	background: #000000;
+}
+
+.radioButton input[type=checkbox] {
+	margin: 0px;
+	opacity: 0;
+}
+
+.charSaves,
+.charSkills {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	margin-bottom: 20px;
+}
+
+.diceRolls,
+.actionContainer {
+	position: relative;
+}
+
+.actionContainer {
+	min-width: 300px;
+}
+
+.charSaves .sectionTitle,
+.charSkills .sectionTitle,
+.rollboxHeader,
+.containerTitle {
+	position: absolute;
+    background: #FFFFFF;
+    padding: 5px;
+    left: 10px;
+    top: -15px;
+    font-size: 12px;
+    z-index: 10;
+}
+
+.clearRolls  {
+	position: absolute;
+    background: #FFFFFF;
+    padding: 3px 4px;
+    right: 10px;
+    top: -15px;
+    font-size: 12px;
+    z-index: 10;
+	color: orangered;
+	border: 1px solid orangered;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.clearRolls:hover {
+	background: orangered;
+	color: #FFFFFF;
+}
+
+.charSaves .fieldGroup,
+.charSkills .fieldGroup {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+
+.charSaves .fieldGroup .charField,
+.charSkills .fieldGroup .charField {
+	display: flex;
+	margin-left: auto;
+}
+
+.charSaves .fieldGroup .charField .displayField,
+.charSkills .fieldGroup .charField .displayField {
+	margin: 0px 15px 0px 10px;
+}
+
+.editButtons div {
+	cursor: pointer;
+}
+
+.editButtons div:hover {
+	background: #999;
+}
+
+.editButton.edittrue {
+	display: none;
+}
+
+.saveButton.editfalse {
+	display: none;
+}
+
+.editField {
+	color: orangered;
+}
+
+.editCheck.editfalse {
+	visibility: hidden;
+}
+
+.showedit_true + .radioButton {
+	border: 1px solid orangered;
+}
+
+.showedit_true + .radioButton.checked_true {
+	background: orangered;
+}
+
+.rollContainer {
+	min-width: 300px;
+}
+
+.rollItem.crit {
+	font-weight: bold;
+	color: #228b22;
+}
+
+.rollItem.fumble {
+	font-style: italic;
+	color: #ff6347;
+}
+
+.diceRolls ul {
+	list-style: none;
+	padding: 0px;
+	margin: 0px;
+	max-height: calc(100vh - 100px);
+    overflow-y: scroll;
+}
+
+.diceRolls ul li {
+	margin: 3px 0px;
+}
+
+.actionRoll {
+	display: flex;
+}
+
+.rollName {
+	margin-right: 10px;
+}
+
+.rollResult {
+	margin-left: auto;
+	margin-right: 5px;
+	padding-left: 10px;
+}
+
+.rollBonus {
+	width: 60px;
+	text-align: right;
+	font-size: 12px;
+	margin-right: 5px;
+}
+
+.actionSubmit {
+	border: none;
+	background: none;
+	color:  orangered;
+	cursor: pointer;
+	margin-left: auto;
+}
+
+.actionShowDetails {
+	border: none;
+	background: none;
+	font-size: 12px;
+	cursor: pointer;
+}
+
+.editTitle {
+	font-weight: bold;
+	cursor: pointer;
+}
+
+.actionList {
+	list-style: none;
+	margin: 0px;
+	padding: 20px 0px 0px;
+}
+
+.actionItem {
+	margin-bottom: 20px;
+}
+
+.inputNum {
+	width: 25px;
+}
+
+.inputDmg {
+	text-align: right;
+}
+
+.actionDetails {
+	display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 20px;
+    row-gap: 5px;
+}
+
+.editAction.show_true .actionDetails {
+	display: none;
+}
+
+.editAction.show_true .actionDetails.showActionDetails {
+	display: grid;
+}
+
+.actionForm.show_false,
+.editAction.show_false,
+.displayAction.show_false {
+	position: absolute;
+}
+
+.actionItem:nth-child(even) .displayAction.show_true,
+.actionItem:nth-child(even) .editAction.show_true {
+	background: #EEEEEE;
+}
+
+.actionItem:nth-child(odd) .displayAction.show_true,
+.actionItem:nth-child(odd) .editAction.show_true {
+	background: #DDDDDD;
+}
+
+.displayAction.show_true,
+.editAction.show_true {
+	border-radius: 10px;
+	padding: 10px 15px;
+	position: relative;
+}
+
+.actionTitle {
+    position: absolute;
+    background: #FFFFFF;
+    padding: 5px;
+    left: 10px;
+    top: -20px;
+    font-size: 14px;
+    z-index: 10;
+	border-radius: 5px;
+	font-weight: 500;
+	cursor: default;
+}
+
+.actionTitle.actionType_attack {
+	cursor: pointer;
+}
+
+.rollHover {
+	display: none;
+	position: absolute;
+	right: -20px;
+    top: -5px;
+    padding: 6px;
+}
+
+.actionTitle.actionType_attack:hover .rollHover,
+.actionDamage:hover .rollHover {
+	display: block;
+}
+
+.actionDamage {
+	font-weight: 500;
+	cursor: pointer;
+	position: relative;
+}
+
+.fieldDisplay {
+	cursor: pointer;
+}
+
+.damageRoll span em {
+	font-style: normal;
+	opacity: 0.33;
+}
+
+.damageRoll span:last-child em {
+	display: none;
+}
+
+.actionRange {
+	padding-left: 15px;
+}
+
+.actionNotes {
+	font-size: 12px;
+	margin-top: 10px;
+}
+
+.rollIcon {
+	padding-right: 10px;
+	font-size: 12px;
+    align-self: center;
+}
+
+.damageRoll {
+	text-align: right;
+	font-size: 12px;
+}
+
+.actionHeader {
+	display: flex;
+}

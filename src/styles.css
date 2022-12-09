@@ -473,3 +473,69 @@ a {
 .actionHeader {
 	display: flex;
 }
+
+.rollContainerHeader {
+	display: none;
+}
+
+@media screen and (max-width: 768px) {
+	.container {
+		flex-direction: column;
+		gap: 20px;
+		padding-top: 150px;
+		position: relative;
+	}
+
+	.charContainer {
+		order: 2;
+	}
+
+	.actionContainer {
+		order: 3;
+	}
+
+	.rollContainer {
+		order: 1;
+		position: fixed;
+		top: 0px;
+		left: 0px;
+		width: calc(100% - 40px);
+		max-height: 115px;
+		background: #FFFFFF;
+		padding: 35px 20px 5px;
+		z-index: 100;
+	}
+
+	.rollboxHeader {
+		display: none;
+	}
+
+	.rollContainerHeader {
+		display: block;
+		position: absolute;
+		background: #FFFFFF;
+		padding: 5px;
+		left: 30px;
+		top: 20px;
+		font-size: 12px;
+		z-index: 10;
+	}
+
+	.diceRolls {
+		max-height: 75px;
+		overflow: scroll;
+	}
+
+	.editButtons {
+		position: fixed;
+		top: 3px;
+		right: 5px;
+		z-index: 111;
+	}
+
+	.nav {
+		position: fixed;
+		z-index: 110;
+		width: 100%;
+	}
+}

@@ -592,6 +592,7 @@ const Character = () => {
 				/>
 			</div>
 			<div className="rollContainer">
+				<div className="rollContainerHeader">Rolls</div>
 				<DiceRolls 
 					rolls={rolls}
 					globaledit={globaledit}

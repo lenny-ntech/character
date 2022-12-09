@@ -9,22 +9,10 @@ const ActionItem = props => {
 
 	const [editing, setEditing] = useState(false)
 
-	const handleEditing = () => {
-		setEditing(true)
-	}
-
 	const handleUpdateDone = (event) => {
 		if (event.key === "Enter") {
 			setEditing(false)
 		}
-	}
-
-
-	const completedStyle = {
-		fontStyle: "italic",
-		color: "#595959",
-		opacity: 0.4,
-		textDecoration: "line-through",
 	}
 
 	const { stat, proficient, hitOrDC, saveType, dmgNum, dmgSize, range, notes, hitBonus, dmgBonus, abilityBonus, id, title } = props.action
@@ -38,13 +26,13 @@ const ActionItem = props => {
     console.log(dmgNum, dmgSize, hitBonus, dmgBonus, abilityBonus)
 
     props.character.map(charfield => {
-        if(charfield.name == stat){
+        if(charfield.name === stat){
         //    console.log(hitOrDC)
             statBonus = Math.floor((charfield.value - 10) / 2)
-            if(hitOrDC == "attack"){
+            if(hitOrDC === "attack"){
                 statValue = Math.floor((charfield.value - 10) / 2) + (proficient ? prof : 0)
             }
-            if (hitOrDC == "save"){
+            if (hitOrDC === "save"){
                 statValue = 8 + Math.floor((charfield.value - 10) / 2) + (proficient ? prof : 0)
             }
         }
@@ -77,7 +65,7 @@ const ActionItem = props => {
     }, [props.globaledit]);
 
     const actionClick = () => {
-        if(hitOrDC == "attack"){
+        if(hitOrDC === "attack"){
             handleRoll20((statValue + parseInt((hitBonus === "" ? 0 : hitBonus))),hitOrDC,title)
         }
     }
@@ -137,7 +125,7 @@ const ActionItem = props => {
                         >
                             <option value=""> - stat - </option>
                         {props.character.map((charfield) =>  {
-                            return charfield.section == "charStats" ? (
+                            return charfield.section === "charStats" ? (
                                 <option key={charfield.id} value={charfield.name}>{charfield.display}</option>
                             ) : (
                                 ""
